@@ -22,10 +22,6 @@ std::unordered_map<int, int> find_divisors(int num){
 }
 
 int main(){
-    // for (auto i : find_divisors(4)){
-    //     std::cout << i.first << ": " << i.second << std::endl;
-    // }
-
     std::unordered_map<int, int> nums;
     for(int i = 2; i < 21; i++){
         nums[i] = 0;
@@ -44,10 +40,6 @@ int main(){
     for (auto i : nums){
         if (i.second != 0)
             mult_result *= pow(i.first,i.second);
-    }
-
-    for (auto i : nums){
-        std::cout << i.first << ": " << i.second << std::endl;
     }
 
     std::cout << mult_result << std::endl;
